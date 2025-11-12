@@ -2,26 +2,27 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Malla Carrera Vet – UOH</title>
+  <title>Malla Medicina Veterinaria – UOH</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Malla – Plan 1 (Carrera Vet)</h1>
-  <div class="malla">
-    <div class="semestre" id="sem1">
-      <h2>Semestre 1</h2>
-      <div class="ramo" id="MAT101" data-prereqs="">MAT101 – Matemáticas I</div>
-      <div class="ramo" id="BIO101" data-prereqs="">BIO101 – Biología I</div>
-      <!-- más ramos… -->
-    </div>
-    <div class="semestre" id="sem2">
-      <h2>Semestre 2</h2>
-      <div class="ramo locked" id="FIS101" data-prereqs="MAT101">FIS101 – Física I</div>
-      <!-- más ramos… -->
-    </div>
-    <!-- más semestres… -->
-  </div>
+  <h1>Malla Interactiva – Medicina Veterinaria (UOH)</h1>
+  <p>Haz clic en cada ramo para marcarlo como aprobado 💜</p>
 
-  <script src="script.js"></script>
-</body>
-</html>
+  <div class="malla">
+    <!-- 1° SEMESTRE -->
+    <div class="semestre">
+      <h2>1° Semestre</h2>
+      <div class="ramo" id="ANATOMIA_ANIMAL" data-prereqs="">Anatomía Animal</div>
+      <div class="ramo" id="BIOLOGIA" data-prereqs="">Biología</div>
+      <div class="ramo" id="BOTANICA" data-prereqs="">Botánica</div>
+      <div class="ramo" id="ZOOLOGIA" data-prereqs="">Zoología</div>
+      <div class="ramo" id="INTRO_MED_VET" data-prereqs="">Introducción a la Medicina Veterinaria</div>
+      <div class="ramo" id="MATEMATICAS" data-prereqs="">Matemáticas</div>
+      <div class="ramo" id="COMUNICACION" data-prereqs="">Comunicación Oral y Escrita</div>
+      <div class="ramo" id="INGLES1" data-prereqs="">Inglés 1 / CFG</div>
+      <div class="ramo" id="PRACTICA1" data-prereqs="">Práctica Formativa 1</div>
+    </div>
+
+    <!-- 2° SEMESTRE -->
+    <div
