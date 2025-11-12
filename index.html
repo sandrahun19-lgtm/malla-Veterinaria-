@@ -1,131 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Malla Medicina Veterinaria – UOH</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Malla Interactiva - Medicina Veterinaria (UOH)</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Malla Interactiva – Medicina Veterinaria (UOH)</h1>
-  <p>Haz clic en cada ramo para marcarlo como aprobado 💜</p>
+  <header>
+    <h1>Malla Interactiva - Medicina Veterinaria (UOH) - Plan 1</h1>
+    <p class="instrucciones">
+      Estados: <span class="leg verde">Aprobado (verde)</span>
+      <span class="leg rosa">Disponible / cursando (rosado)</span>
+      <span class="leg gris">Bloqueado (gris)</span>
+      <span class="leg rojo">Reprobado (rojo)</span>
+      · Clic en un ramo para alternar: <strong>rosado → verde → rojo → rosado</strong>
+    </p>
+  </header>
 
-  <div class="malla">
+  <main class="malla">
     <!-- 1° SEMESTRE -->
-    <div class="semestre">
+    <section class="semestre">
       <h2>1° Semestre</h2>
-      <div class="ramo" id="ANATOMIA_ANIMAL" data-prereqs="">Anatomía Animal</div>
-      <div class="ramo" id="BIOLOGIA" data-prereqs="">Biología</div>
-      <div class="ramo" id="BOTANICA" data-prereqs="">Botánica</div>
-      <div class="ramo" id="ZOOLOGIA" data-prereqs="">Zoología</div>
-      <div class="ramo" id="INTRO_MED_VET" data-prereqs="">Introducción a la Medicina Veterinaria</div>
-      <div class="ramo" id="MATEMATICAS" data-prereqs="">Matemáticas</div>
-      <div class="ramo" id="COMUNICACION" data-prereqs="">Comunicación Oral y Escrita</div>
-      <div class="ramo" id="INGLES1" data-prereqs="">Inglés 1 / CFG</div>
-      <div class="ramo" id="PRACTICA1" data-prereqs="">Práctica Formativa 1</div>
-    </div>
-
-    <!-- 2° SEMESTRE -->
-    <div class="semestre">
-      <h2>2° Semestre</h2>
-      <div class="ramo" id="ANATOMIA_COMPARADA" data-prereqs="ANATOMIA_ANIMAL">Anatomía Comparada</div>
-      <div class="ramo" id="BIO_DESARROLLO" data-prereqs="BIOLOGIA">Biología del Desarrollo e Histología</div>
-      <div class="ramo" id="QUIMICA" data-prereqs="">Química</div>
-      <div class="ramo" id="ECOLOGIA" data-prereqs="ZOOLOGIA">Ecología General</div>
-      <div class="ramo" id="BIOESTADISTICA" data-prereqs="">Bioestadística</div>
-      <div class="ramo" id="HERRAMIENTAS_COMP" data-prereqs="">Herramientas Computacionales</div>
-      <div class="ramo" id="INGLES2" data-prereqs="INGLES1">Inglés 2 / CFG</div>
-    </div>
-
-    <!-- 3° SEMESTRE -->
-    <div class="semestre">
-      <h2>3° Semestre</h2>
-      <div class="ramo" id="FISIOLOGIA1" data-prereqs="ANATOMIA_COMPARADA">Fisiología 1</div>
-      <div class="ramo" id="EPIDEMIOLOGIA" data-prereqs="BIOESTADISTICA">Epidemiología</div>
-      <div class="ramo" id="BIOQUIMICA" data-prereqs="QUIMICA">Bioquímica</div>
-      <div class="ramo" id="ETOLOGIA" data-prereqs="ECOLOGIA">Etología y Bienestar Animal</div>
-      <div class="ramo" id="BIOETICA" data-prereqs="">Bioética y Deontología</div>
-      <div class="ramo" id="ECONOMIA" data-prereqs="">Economía</div>
-      <div class="ramo" id="INGLES3" data-prereqs="INGLES2">Inglés 3 / CFG</div>
-    </div>
-
-    <!-- 4° SEMESTRE -->
-    <div class="semestre">
-      <h2>4° Semestre</h2>
-      <div class="ramo" id="FISIOLOGIA2" data-prereqs="FISIOLOGIA1">Fisiología 2</div>
-      <div class="ramo" id="INMUNOLOGIA" data-prereqs="BIOQUIMICA">Inmunología</div>
-      <div class="ramo" id="MICRO1" data-prereqs="BIOQUIMICA">Microbiología 1</div>
-      <div class="ramo" id="FAUNA_SILVESTRE" data-prereqs="ETOLOGIA">Manejo y Conservación de la Fauna Silvestre</div>
-      <div class="ramo" id="NUTRICION" data-prereqs="">Nutrición Animal</div>
-      <div class="ramo" id="ADMIN_PROY" data-prereqs="ECONOMIA">Administración de Proyectos</div>
-      <div class="ramo" id="INGLES4" data-prereqs="INGLES3">Inglés 4</div>
-    </div>
-
-    <!-- 5° SEMESTRE -->
-    <div class="semestre">
-      <h2>5° Semestre</h2>
-      <div class="ramo" id="FISIOPATOLOGIA" data-prereqs="FISIOLOGIA2">Fisiopatología</div>
-      <div class="ramo" id="PARASITOLOGIA" data-prereqs="INMUNOLOGIA">Parasitología</div>
-      <div class="ramo" id="MICRO2" data-prereqs="MICRO1">Microbiología 2</div>
-      <div class="ramo" id="GESTION_AMB" data-prereqs="FAUNA_SILVESTRE">Gestión Ambiental y en Emergencias</div>
-      <div class="ramo" id="ALIMENTACION" data-prereqs="NUTRICION">Alimentación Animal</div>
-      <div class="ramo" id="ZOO1" data-prereqs="">Zootecnia 1</div>
-      <div class="ramo" id="PRACTICA2" data-prereqs="PRACTICA1">Práctica Formativa 2</div>
-    </div>
-
-    <!-- 6° SEMESTRE -->
-    <div class="semestre">
-      <h2>6° Semestre</h2>
-      <div class="ramo" id="SEMIOMAY" data-prereqs="FISIOPATOLOGIA">Semiología Animales Mayores</div>
-      <div class="ramo" id="SEMIOMEN" data-prereqs="FISIOPATOLOGIA">Semiología Animales Pequeños</div>
-      <div class="ramo" id="PATOLOGIA_GENERAL" data-prereqs="MICRO2">Patología General</div>
-      <div class="ramo" id="ZOO2" data-prereqs="ZOO1">Zootecnia 2</div>
-      <div class="ramo" id="REPRODUCCION" data-prereqs="FISIOLOGIA2">Reproducción</div>
-      <div class="ramo" id="METODO_INV" data-prereqs="">Metodología de la Investigación</div>
-      <div class="ramo" id="INGLES5" data-prereqs="INGLES4">Inglés 5</div>
-    </div>
-
-    <!-- 7° SEMESTRE -->
-    <div class="semestre">
-      <h2>7° Semestre</h2>
-      <div class="ramo" id="IMAGENOLOGIA" data-prereqs="SEMIOMAY,SEMIOMEN">Imagenología</div>
-      <div class="ramo" id="PATOLOGIA_CLINICA" data-prereqs="PATOLOGIA_GENERAL">Patología Clínica</div>
-      <div class="ramo" id="PATO_PROD" data-prereqs="ZOO2">Patología Producciones</div>
-      <div class="ramo" id="ENF_INFECCIOSAS" data-prereqs="MICRO2">Enfermedades Infecciosas</div>
-      <div class="ramo" id="OBSTETRICIA" data-prereqs="REPRODUCCION">Obstetricia y Ginecología</div>
-      <div class="ramo" id="ZOO3" data-prereqs="ZOO2">Zootecnia 3</div>
-    </div>
-
-    <!-- 8° SEMESTRE -->
-    <div class="semestre">
-      <h2>8° Semestre</h2>
-      <div class="ramo" id="MED_INT_MAY1" data-prereqs="SEMIOMAY,IMAGENOLOGIA">Medicina Interna Animales Mayores 1</div>
-      <div class="ramo" id="MED_INT_MEN1" data-prereqs="SEMIOMEN,IMAGENOLOGIA">Medicina Interna Animales Pequeños 1</div>
-      <div class="ramo" id="PATOLOGIA_ANATOMICA" data-prereqs="PATOLOGIA_CLINICA">Anatomía Patológica</div>
-      <div class="ramo" id="ANESTESIOLOGIA" data-prereqs="ENF_INFECCIOSAS">Anestesiología y Cirugía</div>
-      <div class="ramo" id="INOCUIDAD" data-prereqs="PATO_PROD">Inocuidad de los Alimentos</div>
-      <div class="ramo" id="ELECTIVO1" data-prereqs="">Electivo</div>
-    </div>
-
-    <!-- 9° SEMESTRE -->
-    <div class="semestre">
-      <h2>9° Semestre</h2>
-      <div class="ramo" id="MED_INT_MAY2" data-prereqs="MED_INT_MAY1">Medicina Interna Animales Mayores 2</div>
-      <div class="ramo" id="MED_INT_MEN2" data-prereqs="MED_INT_MEN1">Medicina Interna Animales Pequeños 2</div>
-      <div class="ramo" id="ANESTESIOLOGIA_CIRUGIA" data-prereqs="ANESTESIOLOGIA">Anestesiología y Cirugía (avanzada)</div>
-      <div class="ramo" id="MODULO_INTEGRADOR" data-prereqs="">Módulo Integrador: Médico Veterinario en Una Salud</div>
-      <div class="ramo" id="PRACTICA_PREV" data-prereqs="">Práctica Medicina Preventiva y Ambiental</div>
-    </div>
-
-    <!-- 10° SEMESTRE -->
-    <div class="semestre">
-      <h2>10° Semestre</h2>
-      <div class="ramo" id="INTERNADO_MAY" data-prereqs="MED_INT_MAY2">Internado Animales Mayores</div>
-      <div class="ramo" id="INTERNADO_MEN" data-prereqs="MED_INT_MEN2">Internado Animales Pequeños</div>
-      <div class="ramo" id="TRABAJO_TIT1" data-prereqs="METODO_INV">Trabajo de Titulación 1</div>
-      <div class="ramo" id="TRABAJO_TIT2" data-prereqs="TRABAJO_TIT1">Trabajo de Titulación 2</div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
+      <div class="ramo" data-name="Anatomía Animal" data-prereqs="">Anatomía Animal (6 SCT)</div>
+      <div class="ramo" data-name="Biología" data-prereqs="">Biología (5 SCT)</div>
+      <div class="ramo" data-name="Botánica" data-prereqs="">Botánica (4 SCT)</div>
+      <div class="ramo" data-name="Zoología" data-prereqs="">Zoología (4 SCT)</div>
+      <div class="ramo" data-name="Introducción a la Medicina Veterinaria" data-prereqs="">Introducción a la Medicina Veterinaria (4 SCT)</div>
+      <div class=
