@@ -1,1 +1,54 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fafafa;
+  padding: 20px;
+  color: #333;
+}
 
+h1 {
+  text-align: center;
+  color: #6a1b9a;
+}
+
+.malla {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.semestre {
+  border: 3px solid #6a1b9a;
+  border-radius: 12px;
+  padding: 10px;
+  width: 220px;
+  background: #fff;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.semestre h2 {
+  text-align: center;
+  color: #6a1b9a;
+}
+
+.ramo {
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  padding: 6px;
+  margin: 5px 0;
+  background-color: #ffc0cb; /* Rosado = no aprobado */
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ramo.aprobado {
+  background-color: #9c27b0; /* Morado */
+  color: white;
+  text-decoration: line-through;
+}
+
+.ramo.locked {
+  background-color: #ddd;
+  color: #777;
+  cursor: not-allowed;
+}
