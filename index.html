@@ -1,1 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Carrera Vet – UOH</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Malla – Plan 1 (Carrera Vet)</h1>
+  <div class="malla">
+    <div class="semestre" id="sem1">
+      <h2>Semestre 1</h2>
+      <div class="ramo" id="MAT101" data-prereqs="">MAT101 – Matemáticas I</div>
+      <div class="ramo" id="BIO101" data-prereqs="">BIO101 – Biología I</div>
+      <!-- más ramos… -->
+    </div>
+    <div class="semestre" id="sem2">
+      <h2>Semestre 2</h2>
+      <div class="ramo locked" id="FIS101" data-prereqs="MAT101">FIS101 – Física I</div>
+      <!-- más ramos… -->
+    </div>
+    <!-- más semestres… -->
+  </div>
 
+  <script src="script.js"></script>
+</body>
+</html>
